@@ -4,15 +4,29 @@ Project 1 Calculator Second Semester S.Y. 2020-2021
 from tkinter import*
 
 #GRAPHIC CODE
+ 
 
+from tkinter import*
+
+#Initiate new window object
 cal = Tk()
-
 cal.title("TheAmateurs' Calculator")
 
-operator =""
 
+#default value of answer button
+default_answer = "No data"
+
+#variable to be displayed in the calculator
 text_input = StringVar()
 
+
+#this holds all user inputs
+user_input = []
+display = ""
+
+#make the window not resizable
+cal.resizable(False, False)
+cal["bg"]="lightgrey"
 
 #GRAPHIC USER INTERFACE(UI)
 
