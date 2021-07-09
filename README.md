@@ -137,8 +137,6 @@ def evaluate(input):
         user_input.clear()
         val_string = ""
 
-    #END
-
 #USER INTERFACE BRANCH
 
 #calculator display
