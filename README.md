@@ -82,3 +82,58 @@ def evaluate(input):
 
         #change "ans" to data in default answer
         val_string = val_string.replace("ans", str(default_answer))
+
+    #main logic part here
+    #try the expression first
+
+    try:
+        #show the stored answer
+
+        if val_string == "ans":
+            text_input.set(default_answer)
+        #when the user keeps pressing the equals button after a calculation was made
+
+        elif val_string == "":
+            pass
+
+        #raise an error for multiple "x" and "÷" button presses
+
+        elif "invalid"  in val_string == True or val_string == "invalid":
+            raise SyntaxError
+        else:
+
+            #evaluate the string
+            answer = eval(val_string)
+            #copy the calculated data for Ans button
+
+            default_answer = answer
+            
+            #pass the answer to calculator display
+            #and clear the user_input and val_string
+
+            text_input.set(answer)
+            user_input.clear()
+            val_string = ""
+
+    #zero / zero error
+
+    except ZeroDivisionError:
+        text_input.set(err_math)
+        user_input.clear()
+        val_string = ""
+    
+    #syntax error
+
+    except SyntaxError:
+        text_input.set(err_syntax)
+        user_input.clear()
+        val_string = ""
+
+    #no data (when Ans button is clicked with no previous calculations made)
+
+    except NameError:
+        text_input.set("No record")
+        user_input.clear()
+        val_string = ""
+
+    #END
