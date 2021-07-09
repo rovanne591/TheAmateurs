@@ -1,5 +1,4 @@
 GUI-INITIAL-CODE
-#GRAPHIC CODE
  
 from tkinter import*
 
@@ -225,5 +224,4 @@ except NameError:
     user_input.clear()
     val_string = ""
 
-#END
 main
