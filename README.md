@@ -106,4 +106,5 @@ text="=", bg="skyblue", command=lambda:evaluate(user_input)).grid(row=5, column=
 
 cal.mainloop()
 
-#trialkopalangto
+
+
