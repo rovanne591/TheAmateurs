@@ -267,4 +267,3 @@ equal= Button(cal, width=4, bd=8, fg="black", font=("arial", 20, "bold"),
 text="=", bg="skyblue", command=lambda:evaluate(user_input)).grid(row=5, column=4)
 
 cal.mainloop()
-
