@@ -1,7 +1,6 @@
 #LOGIC BRANCH
 
 def btnClick(value):
-
     global display
     global user_input
 
