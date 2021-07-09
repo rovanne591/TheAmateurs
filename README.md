@@ -1,3 +1,24 @@
+from tkinter import*
+#Initiate new window object
+cal = Tk()
+cal.title("TheAmateurs' Calculator")
+
+
+#default value of answer button
+default_answer = "No record"
+
+#variable to be displayed in the calculator
+text_input = StringVar()
+
+
+#this holds all user inputs
+user_input = []
+display = ""
+
+#make the window not resizable
+cal.resizable(False, False)
+cal["bg"]="lightgrey"
+
 class Calculator:
     def btnClick(self, value):
         global display
@@ -217,4 +238,3 @@ equal= Button(cal, width=4, bd=8, fg="black", font=("arial", 20, "bold"),
 text="=", bg="skyblue", command=lambda:c.evaluate(user_input)).grid(row=5, column=4)
 
 cal.mainloop()
-
