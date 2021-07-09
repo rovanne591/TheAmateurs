@@ -1,3 +1,33 @@
+#Initial Code/library BRANCH
+
+from tkinter import*
+
+#Initiate new window object
+
+cal = Tk()
+
+cal.title("TheAmateurs' Calculator")
+
+#default value of answer button
+
+default_answer = "No data"
+
+#variable to be displayed in the calculator
+
+text_input = StringVar()
+
+#this holds all user inputs
+
+user_input = []
+
+display = ""
+
+#make the window not resizable
+
+cal.resizable(False, False)
+
+cal["bg"]="lightgrey"
+
 #LOGIC BRANCH
 
 def btnClick(value):
@@ -238,32 +268,3 @@ text="=", bg="skyblue", command=lambda:evaluate(user_input)).grid(row=5, column=
 
 cal.mainloop()
 
-#Initial Code/library BRANCH
-
-from tkinter import*
-
-#Initiate new window object
-
-cal = Tk()
-
-cal.title("TheAmateurs' Calculator")
-
-#default value of answer button
-
-default_answer = "No data"
-
-#variable to be displayed in the calculator
-
-text_input = StringVar()
-
-#this holds all user inputs
-
-user_input = []
-
-display = ""
-
-#make the window not resizable
-
-cal.resizable(False, False)
-
-cal["bg"]="lightgrey"
